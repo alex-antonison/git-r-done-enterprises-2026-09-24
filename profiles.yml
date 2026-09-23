@@ -1,0 +1,7 @@
+git_r_done_enterprises:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: database/git_r_done_enterprises.duckdb
+      threads: 4
