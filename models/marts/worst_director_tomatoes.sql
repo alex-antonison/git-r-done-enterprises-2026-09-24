@@ -13,5 +13,5 @@ select
 from {{ ref('stg_movies') }}
 join films_per_director f on f.director = stg_movies.director
 group by 1
-qualify RANK() OVER (ORDER BY f.director ASC) < 11
+qualify RANK() OVER (ORDER BY avg_tomato_rating ASC) < 11
 order by avg_tomato_rating asc
